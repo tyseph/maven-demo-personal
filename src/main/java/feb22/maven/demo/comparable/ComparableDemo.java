@@ -1,4 +1,4 @@
-package feb22.maven.demo.comp;
+package feb22.maven.demo.comparable;
 
 import java.util.ArrayList;
 import java.util.Collections;
