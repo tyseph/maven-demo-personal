@@ -1,36 +1,34 @@
 package feb22.maven.demo.col;
 
-import java.awt.List;
 import java.util.ArrayList;
 
-/*
- * Collection Interfaces - 
- * Collections, List, Set, Map, Queue, ....
- * 
- * Collection Classes - 
- * ArrayList, LinkedList, Stack, Vector, HashSet, ....
- */
+// collection interfaces - 
+// Collection, List, Set, Map, Queue, ...  
+
+// collection classes - 
+// ArrayList, LinkedList, Stack, Vector, HashSet,
+// LinkedHashSet, TreeSet, HashMap, LinkedHashMap, TreeMap, ...  
 
 public class ColDemo {
 
 	public static void main(String[] args) {
 
-		ArrayList a1 = new ArrayList();
-		a1.add(10);
-		a1.add(20);
-		a1.add(30);
-		a1.add("abc");
-		System.out.println(a1);
-		System.out.println(a1.size());
-		a1.add(5.50);
-		System.out.println(a1);
-		System.out.println(a1.size());
-		a1.remove(0);
-		System.out.println(a1);
-		System.out.println(a1.size());
-		
-		
+		ArrayList<Integer> al = new ArrayList<>();
+		System.out.println(al.size());
+		al.add(10);
+//		al.add(10.5);
+//		al.add("abc");
+		System.out.println(al);
+		System.out.println(al.size());
+		al.add(25);
+		System.out.println(al);
+		System.out.println(al.size());
+		al.remove(0);
+		System.out.println(al);
+		System.out.println(al.size());
+//		al.
 //		List myList = new ArrayList();
-//		myList.addKeyListener('a');
+
 	}
+
 }
