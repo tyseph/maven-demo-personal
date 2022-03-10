@@ -1,6 +1,6 @@
 package feb22.maven.demo.personal;
 
-public class Emp {
+public class Emp implements Comparable<Emp> {
 
 	private int eid;
 	private String name;
@@ -79,4 +79,18 @@ public class Emp {
 		return "eid=" + eid + ", name=" + name + ", salary=" + salary;
 	}
 
+//	@Override
+//	public int compareTo(Emp obj) {
+//		return this.eid - obj.eid;
+//	}
+
+//	@Override
+//	public int compareTo(Emp obj) {
+//		return this.name.compareTo(obj.name);
+//	}
+
+	@Override
+	public int compareTo(Emp obj) {
+		return Double.compare(this.salary, obj.salary);
+	}
 }
