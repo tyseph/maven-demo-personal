@@ -1,4 +1,4 @@
-package feb22.maven.demo.map;
+package feb22.maven.demo.col.map;
 
 import java.util.Collection;
 import java.util.HashMap;

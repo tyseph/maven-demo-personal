@@ -1,6 +1,5 @@
 package feb22.maven.demo.col;
 
-
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -15,7 +14,7 @@ public class ColDemo3 {
 		Product panel = new Product("Panel", 800);
 		Product table = new Product("Table", 1000);
 
-//		Collection<Product> products = new ArrayList<>();
+//		Collection<Product> products = new ArrayList<>(); // Collection is the senior most interface
 		ArrayList<Product> products = new ArrayList<>();
 		products.add(door);
 		products.add(window);
