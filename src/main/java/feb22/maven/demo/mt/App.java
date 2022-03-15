@@ -29,5 +29,7 @@ public class App extends Thread {
 		app2.start();
 		App app3 = new App();
 		app3.start();
+		App app4 = new App();
+		app4.start();
 	}
 }
