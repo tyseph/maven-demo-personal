@@ -1,0 +1,28 @@
+create table emp(eid INT, Fname VARCHAR(10));
+
+DROP TABLE emp
+
+SELECT * FROM emp;
+
+insert into emp(eid, Fname) values (101, 'Sajal');
+insert into emp(eid, Fname) values (102, 'Gatha');
+
+update emp set Fname = 'Deepak' where eid = 102;
+
+delete from emp where eid = 101;
+
+insert into emp(eid, Fname) values (103, 'Gatha');
+
+--NEW TABLE--
+
+create table emp2(eid INT, fName varchar(10), salary decimal);
+
+insert into emp2(eid, fName, salary) values (101, 'Sajal', 10000);
+insert into emp2(eid, fName, salary) values (102, 'Deepak', 20000);
+insert into emp2(eid, fName, salary) values (103, 'Gatha', 30000);
+insert into emp2(eid, fName, salary) values (104, 'Sparsh', 40000);
+insert into emp2(eid, fName, salary) values (105, 'Adil', 50000);
+
+select * from emp2;
+
+select * from emp2 where salary <= 30000;
