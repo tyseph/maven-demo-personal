@@ -26,3 +26,52 @@ insert into emp2(eid, fName, salary) values (105, 'Adil', 50000);
 select * from emp2;
 
 select * from emp2 where salary <= 30000;
+
+--Database
+--DBMS
+--RDBMS
+
+-- ER Model
+-- Entity -> Classes
+--Features -> Fields
+--Functions -> methods
+
+--ER Model
+--Entity -> Table
+--Features -> columns
+--Instance -> row/ record
+
+drop table emp;
+drop table dept;
+commit;
+
+--DEPARTMENT TABLE--
+create table dept(did int constraint dep_pk primary key, dname varchar(10), city varchar(10));
+
+select * from dept order by did;
+
+update dept set did = 11 where did = 10;
+
+insert into dept(did, dname, city) values (10, 'HR', 'Delhi');
+insert into dept(did, dname, city) values (12, 'Admin', 'Banglore');
+insert into dept(did, dname, city) values (13, 'Tech', 'Kolakata');
+insert into dept(did, dname, city) values (14, 'Mgmt', 'Mumbai');
+
+--EMPLOYEE TABLE--
+create table emp(
+	eid int constraint emp_pk primary key,
+	fname varchar(10),
+	salary decimal,
+	did int constraint emp_dep_fk references dept(did));
+
+select * from emp order by eid;
+
+insert into emp(eid, fname, salary, did) values (101, 'Sajal', 20000, 11);
+insert into emp(eid, fname, salary, did) values (102, 'Deepak', 30000, 13);
+insert into emp(eid, fname, salary, did) values (103, 'Kabir', 40000, 11);
+insert into emp(eid, fname, salary, did) values (104, 'Sparsh', 50000, 12);
+insert into emp(eid, fname, salary, did) values (105, 'Adil', 25000, 13);
+insert into emp(eid, fname, salary, did) values (106, 'Shaurya', 55000, null);
+
+--insert into emp(eid, fname, salary, did) values (106, 'Pranav', 35000, 20);
+
