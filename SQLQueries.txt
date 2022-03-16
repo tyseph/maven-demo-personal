@@ -127,6 +127,6 @@ full outer join dept d
 on e.did=d.did
 order by e.eid;
 
-
+select fname, salary from emp where salary = (select max(salary) from emp);
 
 
