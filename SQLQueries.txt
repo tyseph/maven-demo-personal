@@ -75,3 +75,58 @@ insert into emp(eid, fname, salary, did) values (106, 'Shaurya', 55000, null);
 
 --insert into emp(eid, fname, salary, did) values (106, 'Pranav', 35000, 20);
 
+--In which city does Kabir work?
+--Joins -> Fetches data from multiple table
+
+select fname, city
+from emp
+join dept
+on emp.did = dept.did
+where emp.fname = 'Kabir';
+
+select e.fname, d.city
+from emp e
+join dept d
+on e.did = d.did
+where e.fname = 'Sparsh';
+
+select *
+from emp e
+join dept d
+on e.did=d.did
+order by e.eid;
+
+--Types of join
+--1. Inner join - only matching records
+--2. Outer join -
+--a. left outer join - matching records from both tables and non-matching records from left table
+--b. right outer join - matching records from both tables and non-matching records from right table
+--c. full outer join - matching records from both the tables
+
+select *
+from emp e
+inner join dept d
+on e.did=d.did
+order by e.eid;
+
+select *
+from emp e
+left outer join dept d
+on e.did=d.did
+order by e.eid;
+
+select *
+from emp e
+right outer join dept d
+on e.did=d.did
+order by e.eid;
+
+select *
+from emp e
+full outer join dept d
+on e.did=d.did
+order by e.eid;
+
+
+
+
